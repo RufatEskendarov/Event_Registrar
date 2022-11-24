@@ -1,11 +1,5 @@
-// Wrap all code that interacts with the DOM in a call to jQuery to ensure that
-// the code isn't run until the browser has finished rendering all the elements
-// in the html.
 $(document).ready(function () {
   const dateTime = $("#currentDay");
-
-  let paretn = [];
-
   const dayTime = [
     "01AM",
     "02AM",
@@ -32,29 +26,15 @@ $(document).ready(function () {
     "12AM",
   ];
 
-  const workingEl = [
-    $("#hour-8"),
-    $("#hour-9"),
-    $("#hour-10"),
-    $("#hour-11"),
-    $("#hour-12"),
-    $("#hour-13"),
-    $("#hour-14"),
-    $("#hour-15"),
-    $("#hour-16"),
-    $("#hour-17"),
-    $("#hour-22"),
-    $("#hour-24"),
-  ];
-
+  //Rendering Current date and time on top of the screen
   setInterval(function () {
     let currentDate = moment().format("MMMM Do, YYYY");
     let currentTime = moment().format("hh:mm:ss (A)");
     let currentHour;
-
     dateTime.text(`${currentDate} - ${currentTime}`);
   }, 1000);
 
+  //Coloring time sections according with current time
   function sectionColorFormat() {
     currentHour = moment().format("hhA");
     $(".hour").each(function () {
@@ -87,7 +67,7 @@ $(document).ready(function () {
         localStorage.setItem("08AM-text", textSection);
         break;
       case "hour-09AM":
-        textSection = $("09AM-text").val();
+        textSection = $("#09AM-text").val();
         localStorage.setItem("09AM-text", textSection);
         break;
       case "hour-10AM":
@@ -123,22 +103,20 @@ $(document).ready(function () {
         localStorage.setItem("05PM-text", textSection);
     }
   });
-  // TODO: Add a listener for click events on the save button. This code should
-  // use the id in the containing time-block as a key to save the user input in
-  // local storage. HINT: What does `this` reference in the click listener
-  // function? How can DOM traversal be used to get the "hour-x" id of the
-  // time-block containing the button that was clicked? How might the id be
-  // useful when saving the description in local storage?
-  //
-  // TODO: Add code to apply the past, present, or future class to each time
-  // block by comparing the id to the current hour. HINTS: How can the id
-  // attribute of each time-block be used to conditionally add or remove the
-  // past, present, and future classes? How can Day.js be used to get the
-  // current hour in 24-hour time?
-  //
-  // TODO: Add code to get any user input that was saved in localStorage and set
-  // the values of the corresponding textarea elements. HINT: How can the id
-  // attribute of each time-block be used to do this?
-  //
-  // TODO: Add code to display the current date in the header of the page.
+
+  //Downloading text from localStorage to the appropriate section
+  function downloadTextLocal() {
+    $("#08AM-text").text(localStorage.getItem("08AM-text"));
+    $("#09AM-text").text(localStorage.getItem("09AM-text"));
+    $("#10AM-text").text(localStorage.getItem("10AM-text"));
+    $("#11AM-text").text(localStorage.getItem("11AM-text"));
+    $("#12PM-text").text(localStorage.getItem("12PM-text"));
+    $("#01PM-text").text(localStorage.getItem("01PM-text"));
+    $("#02PM-text").text(localStorage.getItem("02PM-text"));
+    $("#03PM-text").text(localStorage.getItem("03PM-text"));
+    $("#04PM-text").text(localStorage.getItem("04PM-text"));
+    $("#05PM-text").text(localStorage.getItem("05PM-text"));
+  }
+
+  downloadTextLocal();
 });
