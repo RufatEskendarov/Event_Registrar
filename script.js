@@ -37,6 +37,7 @@ $(document).ready(function () {
   //Coloring time sections according with current time
   function sectionColorFormat() {
     currentHour = moment().format("hhA");
+
     $(".hour").each(function () {
       if ($(this)[0].innerText === currentHour) {
         let parent = $(this).parent("div");

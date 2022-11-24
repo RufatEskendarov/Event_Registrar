@@ -1,99 +1,70 @@
-# 05 Third-Party APIs: Work Day Scheduler
+# Event Registrar
 
-## Your Task
+## Description
 
-Create a simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
+This project was created to practice and improve knowledge of JQuery, Bootstrap and 3rd party APIs. Also, the files with the code of this project are great as a tutorial for beginner developers.
 
-You'll need to use the [Day.js](https://day.js.org/en/) library to work with date and time. Be sure to read the documentation carefully and concentrate on using Day.js in the browser.
+Repository: [repo](https://github.com/RufatEskendarov/Event_Registrar)
 
-## User Story
+WebApp: [webapp](https://rufateskendarov.github.io/Event_Registrar/)
 
-```md
+## User Story:
+
 AS AN employee with a busy schedule
 I WANT to add important events to a daily planner
 SO THAT I can manage my time effectively
-```
 
-## Acceptance Criteria
+## Acceptance Criteria:
 
-```md
-GIVEN I am using a daily planner to create a schedule
-WHEN I open the planner
-THEN the current day is displayed at the top of the calendar
-WHEN I scroll down
-THEN I am presented with timeblocks for standard business hours
-WHEN I view the timeblocks for that day
-THEN each timeblock is color coded to indicate whether it is in the past, present, or future
-WHEN I click into a timeblock
-THEN I can enter an event
-WHEN I click the save button for that timeblock
-THEN the text for that event is saved in local storage
-WHEN I refresh the page
-THEN the saved events persist
-```
+- GIVEN I am using a daily planner to create a schedule;
+- WHEN I open the planner
+  THEN the current day is displayed at the top of the calendar;
+- WHEN I scroll down
+  THEN I am presented with time blocks for standard business hours;
+- WHEN I view the time blocks for that day
+  THEN each time block is color-coded to indicate whether it is in the past, present, or future;
+- WHEN I click into a time block
+  THEN I can enter an event;
+- WHEN I click the save button for that time block
+  THEN the text for that event is saved in local storage;
+- WHEN I refresh the page
+  THEN the saved events persist.
 
-The following animation demonstrates the application functionality:
+## Installation
 
-<!-- @TODO: create ticket to review/update image) -->
-![A user clicks on slots on the color-coded calendar and edits the events.](./Assets/05-third-party-apis-homework-demo.gif)
+This application does not require installation, just follow the link:[webapp](https://rufateskendarov.github.io/Event_Registrar/)
 
-## Grading Requirements
+## Usage
 
-> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
+1. By clicking on the link to the webapp, you will be taken to the home page with the app name and current date and time under it.You will also see the hours of the working day from 08 am to 05 pm, sections and buttons to save the corresponding hours.(Screen-1);
+2. The hour sections will be colored. The current hour will be red, the past hour sections will be grey, and the future hour sections will be green. You can enter upcoming or completed tasks, as well as notes in the section and by pressing the blue button with the image of a diskette. As a result of this action, the text will be saved to local storage.(Screen-1);
+3. You can also delete or add comments saved in the local storage. Simply Delete the text and click on the save button or complete it and repeat the action. (Sсreen-2);
 
-This Challenge is graded based on the following criteria:
+![Screen-1](./screenshots/screen-1.PNG)
+![Screen-2](./screenshots/screen-2.PNG)
 
-### Technical Acceptance Criteria: 40%
+## Credits
 
-* Satisfies all of the above acceptance criteria plus the following:
+In this project, I used the methods and templates acquired in the JavaScript course from Jonas Schmidtmann [JonasSchmidtman](https://www.udemy.com/course/the-complete-javascript-course/).
 
-  * Uses a date utility library to work with date and time
+## License
 
-### Deployment: 32%
+In accordance with https://choosealicense.com/licenses/gpl-3.0/
 
-* Application deployed at live URL
+## Features
 
-* Application loads with no errors
+- HTML5
+- CSS3
+- JavaScript
+- DOM manipulations
+- JQuery
+- Bootstrap
+- 3rd party APIs
 
-* Application GitHub URL submitted
+## How to Contribute
 
-* GitHub repo contains application code
+Please review my page if you have ideas or advises please contact me (rufat.eskendarov@gmail.com)
 
-### Application Quality: 15%
+## Tests
 
-* Application user experience is intuitive and easy to navigate
-
-* Application user interface style is clean and polished
-
-* Application resembles the mock-up functionality provided in the Challenge instructions
-
-### Repository Quality: 13%
-
-* Repository has a unique name
-
-* Repository follows best practices for file structure and naming conventions
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages
-
-* Repository contains quality README file with description, screenshot, and link to deployed application
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application
-
-* The URL of the GitHub repository, with a unique name and a README describing the project
-
-- - -
-© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+Manual testing was carried out on the application, no errors or bugs were found. If you encounter problems while using the app, please contact me (rufat.eskendarov@gmail.com).
